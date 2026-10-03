@@ -35,7 +35,7 @@
 - tmux
 - yazi
 - nvim-git
-- 
+
 # others
 - helium / qutebrowser
 - cambiar usario de tom a t
