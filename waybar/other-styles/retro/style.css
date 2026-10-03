@@ -1,0 +1,76 @@
+/* Gruvbox Material Dark Soft */
+/* bg: #32302f, bg1: #3c3836, fg: #d4be98 */
+/* red: #ea6962, green: #a9b665, yellow: #d8a657 */
+/* blue: #7daea3, purple: #d3869b, aqua: #89b482, orange: #e78a4e */
+
+* {
+  font-family: UDEV Gothic;
+  font-size: 22px;
+  font-weight: 900;
+  color: #d4be98;
+  border-radius: 0px;
+}
+
+window#waybar {
+  background-color: rgba(50, 48, 47, 1); /* #32302f */
+}
+
+#custom-wlogout {
+  padding: 0px 0px 0px 0px;
+  color: #89b482; /* aqua */
+}
+
+#workspaces {
+  padding: 0 5px;
+}
+
+#workspaces button {
+  padding: 0 10px;
+  color: #665c54; /* dim/inactive */
+  background: transparent;
+  border: none;
+}
+
+/* occupied but NOT active */
+#workspaces button.occupied {
+  color: #7daea3; /* aqua-blue */
+}
+
+/* active workspace — takes priority, must come after .occupied */
+#workspaces button.active {
+  background: transparent;
+  border-radius: 0;
+}
+
+#workspaces button.active label {
+  color: #a9b665; /* gruvbox green */
+}
+
+/* urgent workspace */
+#workspaces button.urgent label {
+  color: #ea6962; /* gruvbox red */
+}
+
+#workspaces button:hover {
+  box-shadow: none;
+  text-shadow: none;
+  background: rgba(60, 56, 54, 0.8); /* #3c3836 */
+  border-top: none;
+}
+
+#pulseaudio {
+  padding: 0px 10px 0px 10px;
+}
+
+#bluetooth {
+  padding: 0px 10px 0px 0px;
+}
+
+#clock.date {
+  padding: 0px 10px 0px 0px;
+}
+
+#clock {
+  padding: 0px 10px 0px 0px;
+}
+

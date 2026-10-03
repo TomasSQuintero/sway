@@ -1,0 +1,5 @@
+#mod1 = alt, mod4 = super
+set $mod Mod1
+
+include /etc/sway/config.d/*
+include ~/.config/sway/config.d/*

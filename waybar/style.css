@@ -1,0 +1,77 @@
+/* Gruvbox Material Dark Soft */
+/* bg: #32302f, bg1: #3c3836, fg: #d4be98 */
+/* red: #ea6962, green: #a9b665, yellow: #d8a657 */
+/* blue: #7daea3, purple: #d3869b, aqua: #89b482, orange: #e78a4e */
+
+* {
+  font-family: UDEV Gothic;
+  font-size: 18px;
+  font-weight: 900;
+  color: #d4be98;
+  border-radius: 0px;
+}
+
+window#waybar {
+  background-color: rgba(50, 48, 47, 1);
+}
+
+#custom-wlogout {
+  padding: 0px 0px 0px 0px;
+  color: #89b482;
+}
+
+#workspaces {
+  padding: 0 5px;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  color: #7daea3;
+  background: transparent;
+  border: none;
+}
+
+#workspaces button.visible label {
+  color: #d8a657;
+}
+
+#workspaces button.focused {
+  background: #d8a657;
+  border-radius: 0;
+}
+
+#workspaces button.focused label {
+  color: #32302f;
+}
+
+#workspaces button.urgent label {
+  color: #ea6962;
+}
+
+#workspaces button:hover {
+  box-shadow: none;
+  text-shadow: none;
+  background: rgba(60, 56, 54, 0.8);
+  border-top: none;
+}
+
+#mode {
+  padding: 0px 0px 0px 5px;
+  color: #ea6962;
+}
+
+#pulseaudio {
+  padding: 0px 10px 0px 10px;
+}
+
+#bluetooth {
+  padding: 0px 10px 0px 0px;
+}
+
+#clock.date {
+  padding: 0px 10px 0px 0px;
+}
+
+#clock {
+  padding: 0px 10px 0px 0px;
+}

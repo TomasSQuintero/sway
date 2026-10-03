@@ -1,0 +1,89 @@
+{
+  "layer": "top",
+  "position": "top",
+  // "margin": 10,
+  "margin-top": 6,
+  "margin-left": 6,
+  "margin-right": 6,
+  "modules-left": ["custom/wlogout","hyprland/workspaces"],
+  "modules-center": [],
+  "modules-right": ["mpris","pulseaudio","bluetooth","clock#date","clock"],
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十"
+    },
+    "sort-by-number": true,
+    "active-only": false
+//    "active-only": false, // this one has a comma at the end
+//    "persistent-workspaces": {
+//    "*": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//  }
+  },
+
+"custom/wlogout": {
+    "format": "[ 󰣇 ]",
+    "tooltip": "Logout",
+    "on-click": "wlogout"
+},
+    
+"mpris": {
+    "format": "{title} - {artist}",
+    "format-paused": " {title} - {artist}",
+    "format-stopped": "",
+    "max-length": 150,
+    "interval": 1,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+},
+
+"pulseaudio": {
+    "format": "[ {volume} ]",
+    "format-muted": "[ 0 ]",
+    "on-click": "pavucontrol",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
+    "scroll-step": 1,
+    "ignored-sinks": ["Easy Effects Sink"],
+    "tooltip": "volume"
+},
+
+"bluetooth": {
+    "format": "[ 󰂯 ]",
+    "format-disabled": "[ 󰂲 ]",
+    "format-off": "[ 󰂲 ]",
+    "format-no-controller": "[ 0 ]",
+    "on-click": "blueman-manager",
+    "on-click-right": "rfkill toggle bluetooth",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+},
+
+"clock#date":{
+    "format": "[ {:%d.%m} ]",
+    "tooltip": false
+},
+
+"clock": {
+    "timezone": "America/Argentina/Buenos_Aires",
+    "format": "[ {:%H:%M} ]",
+    "tooltip-format": "{:%A, %d %B %Y}",
+    "interval": 60
+}
+
+}

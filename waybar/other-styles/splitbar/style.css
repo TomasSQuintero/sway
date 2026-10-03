@@ -1,0 +1,76 @@
+/* padding order: top | right | bottom | left */
+/*color: #F1BE9B;*/
+* {
+  font-family: UDEV Gothic;
+  font-size: 18px;
+  font-weight: 900;
+  color: #cccccc;
+  /* color: #cccccc; */
+  border-radius: 5px;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+.modules-left,
+.modules-right {
+  background-color: rgba(30, 30, 30, 0.2);
+  margin: 5px;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+#custom-wlogout {
+  padding: 0px 0px 0px 10px;
+}
+
+#workspaces {
+  padding: 0 5px;
+}
+
+#workspaces button {
+  padding: 0 10px;
+  color: #888;
+  background: transparent;
+  border: none;
+}
+
+#workspaces button.active {
+  background: transparent;
+  /* border-bottom: 2px solid #cccccc; */
+  border-radius: 0;
+}
+
+#workspaces button.active label {
+  color: #6E9CA5;
+  /* color: #e1d4ab; */
+}
+
+#workspaces button:hover {
+  box-shadow: none;
+  text-shadow: none;
+  background: inherit;
+  border-top: none;
+  background: rgba(60, 58, 57, 0.8);
+}
+
+#mpris {
+  padding: 0px 0px 0px 10px;
+}
+
+#pulseaudio {
+  padding: 0px 10px 0px 10px;
+}
+
+#bluetooth{
+  padding: 0px 10px 0px 0px;
+}
+
+#clock.date {
+  padding: 0px 0px 0px 0px;
+}
+
+#clock {
+  padding: 0px 10px 0px 10px;
+}

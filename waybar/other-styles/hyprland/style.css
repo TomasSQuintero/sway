@@ -1,0 +1,81 @@
+/* top | right | bottom | left (clockwise) */
+
+/* "#DBBC7FFF" */
+
+* {
+  font-family: UDEV Gothic;
+  font-size: 22px;
+  font-weight: 900;
+  color: #cccccc;
+  border-radius: 5px;
+}
+
+window#waybar {
+  background-color: rgba(30, 30, 30, 0.4);
+}
+
+#custom-wlogout {
+  padding: 0px 0px 0px 10px;
+  /* color: #ebbcba; */
+}
+
+#workspaces {
+  padding: 0 5px;
+}
+
+#workspaces button {
+  padding: 0 10px;
+  color: #dbbc7f;
+  background: transparent;
+  border: none;
+}
+
+#workspaces button.active {
+  background: transparent;
+}
+
+#workspaces button.active label {
+  /* color: #ebbcba; */
+  color: #DBBC7F;
+}
+
+#workspaces button:hover {
+  box-shadow: none;
+  text-shadow: none;
+  background: inherit;
+  border-top: none;
+  background: rgba(219, 188, 127, 1);
+}
+
+#workspaces button:hover label{
+  box-shadow: none;
+  text-shadow: none;
+  background: inherit;
+  border-top: none;
+  color: #374145;
+}
+
+
+#pulseaudio {
+  padding: 0px 10px 0px 10px;
+}
+
+#bluetooth{
+  padding: 0px 10px 0px 0px;
+}
+
+#clock.date {
+  padding: 0px 10px 0px 0px;
+}
+
+#clock {
+  padding: 0px 10px 0px 0px;
+}
+
+window#waybar.fullscreen #workspaces button.active {
+    background: #DBBC7FFF;
+}
+
+window#waybar.fullscreen #workspaces button.active label{
+    color: #272E33;
+}

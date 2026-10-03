@@ -1,0 +1,81 @@
+/* top | right | bottom | left (clockwise) */
+
+/* "#DBBC7FFF" */
+
+* {
+  font-family: UDEV Gothic;
+  font-size: 22px;
+  font-weight: 900;
+  color: #333333;
+  border-radius: 0px;
+}
+
+window#waybar {
+  background-color: rgba(204, 204, 204, 1);
+}
+
+#custom-wlogout {
+  padding: 0px 0px 0px 0px;
+  /* color: #ebbcba; */
+}
+
+#workspaces {
+  padding: 0 5px;
+}
+
+#workspaces button {
+  padding: 0 10px;
+  color: #657B83;
+  background: transparent;
+  border: none;
+}
+
+#workspaces button.active {
+  background: transparent;
+}
+
+#workspaces button.active label {
+  /* color: #ebbcba; */
+  color: #657B83;
+}
+
+#workspaces button:hover {
+  box-shadow: none;
+  text-shadow: none;
+  background: inherit;
+  border-top: none;
+  background: #657B83;
+}
+
+#workspaces button:hover label{
+  box-shadow: none;
+  text-shadow: none;
+  background: inherit;
+  border-top: none;
+  color: #374145;
+}
+
+
+#pulseaudio {
+  padding: 0px 10px 0px 10px;
+}
+
+#bluetooth{
+  padding: 0px 10px 0px 0px;
+}
+
+#clock.date {
+  padding: 0px 10px 0px 0px;
+}
+
+#clock {
+  padding: 0px 10px 0px 0px;
+}
+
+window#waybar.fullscreen #workspaces button.active {
+    background: #657B83;
+}
+
+window#waybar.fullscreen #workspaces button.active label{
+    color: #272E33;
+}

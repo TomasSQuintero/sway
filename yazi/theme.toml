@@ -1,0 +1,34 @@
+[icon]
+
+dirs = [
+	{ name = ".config", text = "", fg = "#5a93aa" },
+	{ name = ".git", text = "", fg = "#5a93aa" },
+	{ name = ".github", text = "", fg = "#5a93aa" },
+	{ name = ".npm", text = "", fg = "#5a93aa" },
+	{ name = "Desktop", text = "", fg = "#5a93aa" },
+	{ name = "Development", text = "", fg = "#5a93aa" },
+	{ name = "Documents", text = "", fg = "#5a93aa" },
+	{ name = "Downloads", text = "", fg = "#5a93aa" },
+	{ name = "Library", text = "", fg = "#5a93aa" },
+	{ name = "Movies", text = "", fg = "#5a93aa" },
+	{ name = "Music", text = "", fg = "#5a93aa" },
+	{ name = "Pictures", text = "", fg = "#5a93aa" },
+	{ name = "Public", text = "", fg = "#5a93aa" },
+	{ name = "Videos", text = "", fg = "#5a93aa" },
+]
+conds = [
+	# # Special files
+	# { if = "orphan", text = "", fg = "#cad3f5" },
+	# { if = "link", text = "", fg = "#8087a2" },
+	# { if = "block", text = "", fg = "#f0c6c6" },
+	# { if = "char", text = "", fg = "#f0c6c6" },
+	# { if = "fifo", text = "", fg = "#f0c6c6" },
+	# { if = "sock", text = "", fg = "#f0c6c6" },
+	# { if = "sticky", text = "", fg = "#f0c6c6" },
+	# { if = "dummy", text = "", fg = "#ed8796" },
+
+	# Fallback
+	{ if = "dir", text = "", fg = "#5a93aa" },
+	{ if = "exec", text = "", fg = "#5a93aa" },
+	{ if = "!dir", text = "", fg = "#5a93aa" },
+]
