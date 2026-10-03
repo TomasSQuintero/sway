@@ -1,30 +1,3 @@
-por ahora ya arme un repo con los dotfiles de mac
-tienen la estructura requerida para que funcionen con stow
-
-ademas, borre del repo de dotfiles las carpetas de mac y de debian
-
-todo:
-- [ ] armar un .md para ver como funciona stow
-    - [ ] que tenga el tree de dotfiles
-    - [ ] que comando hay que correr para que funcione bien (incluir -t y -adopt)
-    - [ ] que comando hay q hacer para revertir
-- [ ] organizar el repo de dotfiles
-    - [ ] pasar de dotfiles/arch/apps a dotfiles/apps
-    - [ ] adoptar la estructura necesaria para stow
-- [ ] actualizar readmes de ambos repos
-    - [ ] agregar como funciona lo de stow
-- [ ] agregar un theme switcher con stow
-    - [ ] capaz en ves de tener hyprland solo se puede tener tipo:
-
-|- hyprland/default
-  |_ .config/hyprland/...
-|- hyprland/retro
-  |_ .config/hyprland/...
-|- hyprland/testing
-  |_ .config/hyprland/...
-
-y al llamar stow, en vez de hacer stow hyprland, hacemos stow hyprland/retro, no se si funciona
-
 Para lo del theme switcher:
 Claude había dado una opción para correr Claude desde el directorio de dotfiles para elegir un theme.
 El tema ahora es: si quiero hacer un script de bash o de rofi lo que sea, yo necesito correr ese comando de stow dentro del directorio de dotfiles 

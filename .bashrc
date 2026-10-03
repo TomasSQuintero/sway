@@ -22,24 +22,21 @@ alias ytdl='sh ~/.config/scripts/yt-dl.sh'
 # --------------------------------------------------------------------------
 dotdirs=(
     ~/.bashrc
+    ~/.config/fastfetch/
+    ~/.config/kitty/
     ~/.config/mpd/
     ~/.config/mpv/
+    ~/.config/nvim/
     ~/.config/qimgv/
     ~/.config/rmpc/
     ~/.config/rofi
     ~/.config/sioyek/
+    ~/.config/sway/
     ~/.config/tmux/
     ~/.config/waybar/
     ~/.config/yazi/
     ~/.config/zathura/
-    ~/.config/sway/
     ~/.inputrc
-    # ~/.config/fastfetch/
-    # ~/.config/hypr/
-    # ~/.config/kitty/
-    # ~/.config/nvim/
-    # ~/.config/scripts/
-    # ~/.config/wallpapers/
 )
 
 dots() {
@@ -79,7 +76,7 @@ gacp() {
     git push
 }
 
-syncnotes() {
+sync() {
     git add .
     git commit -m "$(date '+%Y-%m-%d %H:%M:%S')"
     git push
