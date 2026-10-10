@@ -1,0 +1,29 @@
+[global]
+font = JetBrains Mono 12
+corner_radius = 0
+icon_position = left
+
+min_icon_size = 100
+max_icon_size = 100
+
+frame_width = 2
+
+width = (300, 800)
+height = (100, 500)
+
+origin = top-right
+offset = (20, 20)
+
+padding = 8
+horizontal_padding = 8
+
+[urgency_normal]
+background = "#32302F"
+frame_color = "#A89984"
+foreground = "#D4BE98"
+timeout = 2
+
+[music]
+appname = Music
+timeout = 2
+history_ignore = yes

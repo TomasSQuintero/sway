@@ -12,16 +12,12 @@ PS1='\w > '
 
 # scripts
 # --------------------------------------------------------------------------
-alias wall='sh ~/.config/scripts/change-wallpaper-swaybg.sh'
-alias peli='sh ~/.config/scripts/movie.sh'
-alias show='sh ~/.config/scripts/show.sh'
-alias episode='sh ~/.config/scripts/episode.sh'
-alias ytdl='sh ~/.config/scripts/yt-dl.sh'
 
 # copy dotfiles to repo directory
 # --------------------------------------------------------------------------
 dotdirs=(
     ~/.bashrc
+    ~/.config/dunst/
     ~/.config/fastfetch/
     ~/.config/kitty/
     ~/.config/mpd/
@@ -161,8 +157,6 @@ alias links='cd ~/notes && nvim links.md'
 alias later='cd ~/notes/later/ && yazi'
 alias empty='rm -rf ~/.local/share/Trash/*'
 
-alias s='sioyek'
-
 # Created by `pipx` on 2026-01-17 21:57:56
 export PATH="$PATH:/home/tom/.local/bin"
 export PATH="$PATH:/usr/bin/cava"
@@ -179,6 +173,15 @@ compare() {
 #sudo pacman -S bash-completion
 [[ -r /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
 
+# history
+# ---------------------------------------------------------------------------
+# dont record duplicate lines
+HISTCONTROL=ignoreboth:erasedups
+# large history
+HISTSIZE=100000
+HISTFILESIZE=200000
+# single shared history
+# PROMPT_COMMAND="history -a; history -c; history -r${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
 
 # to trim the path:
 # PROMPT_DIRTRIM=3
