@@ -71,7 +71,7 @@ alias grep='grep --color=auto'
 # Aliases: apps
 # ----------------------------------------------------------------------------
 alias n='nvim'
-alias bedit='nvim ~/.zshrc'
+alias zedit='nvim ~/.zshrc'
 alias neofetch='fastfetch'
 alias cmatrix='unimatrix -s 90 -f -a -l nk'
 alias fastfetchimage='fastfetch --logo-type kitty-icat --logo "$(find ~/.config/fastfetch/ -type f | fzf)" --logo-width 23 --logo-height 13'
@@ -84,11 +84,10 @@ alias clip='wl-copy'
 source <(fzf --zsh)
 export FZF_DEFAULT_OPTS='-m --style full --bind ctrl-space:accept'
 # bindkey -r '^T'
-
-alias ffzf='fzf -m --preview "bat --style=numbers --color=always {}" --layout reverse'
-alias nv='nvim "$(fzf -m --preview "bat --style=numbers --color=always {} | head -n 100" --layout reverse)"'
-alias mmpv='mpv "$(fzf --query ".mp4$ | .mkv$ " --layout reverse)"'
-alias headlessmmpv='mpv --audio-display=no "$(fzf)"'
+# alias ffzf='fzf -m --preview "bat --style=numbers --color=always {}" --layout reverse'
+# alias nv='nvim "$(fzf -m --preview "bat --style=numbers --color=always {} | head -n 100" --layout reverse)"'
+# alias mmpv='mpv "$(fzf --query ".mp4$ | .mkv$ " --layout reverse)"'
+# alias headlessmmpv='mpv --audio-display=no "$(fzf)"'
 
 
 # ----------------------------------------------------------------------------
@@ -107,6 +106,7 @@ gacp() {
     git push
 }
 
+# git add, commit, push. commit message is date and time
 sync() {
     git add .
     git commit -m "$(date '+%Y-%m-%d %H:%M:%S')"
@@ -203,15 +203,6 @@ pdf() {
     fi
 }
 
-compare() {
-    if [ "$#" -ne 2 ]; then
-        echo "Uso: compare archivo1 archivo2"
-        return 1
-    fi
-
-    diff -u "$1" "$2" | bat -l diff
-}
-
 
 # ----------------------------------------------------------------------------
 # yazi (cd to the directory you quit in)
@@ -228,10 +219,6 @@ y() {
 # ----------------------------------------------------------------------------
 # Notes / temp
 # ----------------------------------------------------------------------------
-alias cn='cd ~/notes && y'
-alias notes='cd ~/notes && nvim'
-alias links='cd ~/notes && nvim links.md'
-alias later='cd ~/notes/later/ && yazi'
 alias empty='rm -rf ~/.local/share/Trash/*'
 
 

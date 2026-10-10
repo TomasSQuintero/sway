@@ -38,7 +38,7 @@
     
 "mpris": {
     "format": "[ {title} - {artist} ]",
-    "format-paused": " {title} - {artist}",
+    "format-paused": "[  {title} - {artist} ]",
     "format-stopped": "",
     "max-length": 150,
     "interval": 1,
