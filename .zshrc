@@ -76,6 +76,7 @@ alias neofetch='fastfetch'
 alias cmatrix='unimatrix -s 90 -f -a -l nk'
 alias fastfetchimage='fastfetch --logo-type kitty-icat --logo "$(find ~/.config/fastfetch/ -type f | fzf)" --logo-width 23 --logo-height 13'
 alias clip='wl-copy'
+alias files='cd ~/sway'
 
 
 # ----------------------------------------------------------------------------
