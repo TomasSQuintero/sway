@@ -283,7 +283,7 @@
                 direction: Horizontal,
                 panes: [
                     (
-                        size: "37%",
+                        size: "40%",
                         pane: Split(
                             direction: Vertical,
                             panes: [
@@ -297,7 +297,7 @@
                         ),
                     ), 
                     (
-                        size: "63%",
+                        size: "60%",
                         pane: Pane(Lyrics), 
                         borders: "ALL",
                         border_symbols: Rounded,
