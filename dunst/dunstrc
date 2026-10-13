@@ -27,3 +27,9 @@ timeout = 2
 appname = Music
 timeout = 2
 history_ignore = yes
+
+[volume]
+    appname = volume
+    format = "<b>%s</b>\n<span size='7000'> </span>\n%b"
+    alignment = left
+    timeout = 1
