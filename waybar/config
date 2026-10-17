@@ -5,7 +5,7 @@
   "margin-left": 0,
   "margin-right": 0,
   "margin-bottom": 0,
-  "modules-left": ["custom/wlogout","sway/workspaces", "sway/mode", "sway/window"],
+  "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
   "modules-center": [],
   "modules-right": ["mpris","pulseaudio","bluetooth","clock#date","clock"],
 

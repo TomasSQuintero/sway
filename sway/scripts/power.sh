@@ -1,19 +1,20 @@
 #!/usr/bin/env bash
 
 choice=$(printf '%s\n' \
-    "lock" \
     "logout" \
-    "suspend" \
-    "hibernate" \
+    "sleep" \
     "reboot" \
     "shutdown" \
     | rofi -dmenu -i -p "power")
 
 case "$choice" in
-    "lock")      swaylock ;;
     "logout")    swaymsg exit ;;
-    "suspend")   systemctl suspend ;;
-    "hibernate") systemctl hibernate ;;
+    "sleep")   systemctl suspend ;;
     "reboot")    systemctl reboot ;;
     "shutdown")  systemctl poweroff ;;
 esac
+
+    # "lock" \
+    # "hibernate" \
+    # "lock")      swaylock ;;
+    # "hibernate") systemctl hibernate ;;

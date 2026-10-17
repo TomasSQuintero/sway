@@ -1,27 +1,26 @@
 /* Gruvbox Material Dark Soft */
-/* bg: #32302f, bg1: #3c3836, fg: #d4be98 */
-/* red: #ea6962, green: #a9b665, yellow: #d8a657 */
+/* bg: #32302f, bg1: #3c3836, fg/light: #d4be98 */
+/* red: #ea6962, green: #a9b665, yellow (now light): #d4be98 */
 /* blue: #7daea3, purple: #d3869b, aqua: #89b482, orange: #e78a4e */
 
 * {
   font-family: UDEV Gothic;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 900;
   color: #d4be98;
   border-radius: 0px;
 }
 
+/* Light bar: the middle (window title) sits directly on this */
 window#waybar {
-  background-color: rgba(50, 48, 47, 1);
+  background-color: #d4be98;
 }
 
-#custom-wlogout {
-  padding: 0px 0px 0px 0px;
-  color: #89b482;
-}
+/* ---------- Left: dark ---------- */
 
 #workspaces {
-  padding: 0 5px;
+  padding: 0px;
+  background-color: #32302f;
 }
 
 #workspaces button {
@@ -32,11 +31,12 @@ window#waybar {
 }
 
 #workspaces button.visible label {
-  color: #d8a657;
+  color: #d4be98;
 }
 
+/* Focused workspace: light, like dwm's selected tag */
 #workspaces button.focused {
-  background: #d8a657;
+  background: #d4be98;
   border-radius: 0;
 }
 
@@ -56,22 +56,43 @@ window#waybar {
 }
 
 #mode {
-  padding: 0px 0px 0px 5px;
+  padding: 0px 5px;
   color: #ea6962;
+  background-color: #32302f;
 }
 
-#pulseaudio {
-  padding: 0px 10px 0px 10px;
+/* ---------- Middle: light ---------- */
+
+#window {
+  padding: 0px 5px;
+  color: #32302f;
+  background-color: #d4be98;
 }
 
-#bluetooth {
-  padding: 0px 10px 0px 0px;
-}
+/* ---------- Right: dark ---------- */
 
-#clock.date {
-  padding: 0px 10px 0px 0px;
-}
-
+#mpris,
+#pulseaudio,
+#bluetooth,
+#clock.date,
 #clock {
-  padding: 0px 10px 0px 0px;
+  padding: 0px 5px 0px 0px;
+  background-color: #32302f;
+}
+
+/* mpris is empty when stopped but its padding/background still render,
+   which was pushing the dark block out to the left */
+#mpris.playing,
+#mpris.paused {
+  padding: 0px 5px;
+}
+
+#mpris.stopped {
+  padding: 0px;
+  margin: 0px;
+}
+
+#custom-wlogout {
+  padding: 0px 0px 0px 0px;
+  color: #89b482;
 }

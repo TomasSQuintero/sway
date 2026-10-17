@@ -8,20 +8,16 @@ STATE="${XDG_RUNTIME_DIR:-/tmp}/sway-gaps-off"
 power_menu() {
     local choice
     choice=$(printf '%s\n' \
-        "lock" \
         "logout" \
-        "suspend" \
-        "hibernate" \
+        "sleep" \
         "reboot" \
         "shutdown" \
         "back" \
         | rofi -dmenu -i -p "power")
 
     case "$choice" in
-        "lock")      exec swaylock ;;
         "logout")    swaymsg exit ;;
-        "suspend")   systemctl suspend ;;
-        "hibernate") systemctl hibernate ;;
+        "sleep")   systemctl suspend ;;
         "reboot")    systemctl reboot ;;
         "shutdown")  systemctl poweroff ;;
         "back")      main_menu ;;
