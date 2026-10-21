@@ -1,98 +1,104 @@
-/* Gruvbox Material Dark Soft */
-/* bg: #32302f, bg1: #3c3836, fg/light: #d4be98 */
-/* red: #ea6962, green: #a9b665, yellow (now light): #d4be98 */
-/* blue: #7daea3, purple: #d3869b, aqua: #89b482, orange: #e78a4e */
+/* Kanagawa Dragon
+   bg: #181616   bg1: #282727   fg/light: #c4b28a (dragonYellow)
+   red: #c4746e  green: #87a987 */
 
 * {
   font-family: UDEV Gothic;
   font-size: 16px;
   font-weight: 900;
-  color: #d4be98;
-  border-radius: 0px;
+  color: #c4b28a;
+  border-radius: 0;
 }
 
-/* Light bar: the middle (window title) sits directly on this */
 window#waybar {
-  background-color: #d4be98;
+  background-color: #c4b28a;
 }
 
-/* ---------- Left: dark ---------- */
+/* ---------- Izquierda: oscuro ---------- */
 
 #workspaces {
-  padding: 0px;
-  background-color: #32302f;
+  padding: 0;
+  background-color: #181616;
 }
 
 #workspaces button {
   padding: 0 5px;
-  color: #7daea3;
   background: transparent;
   border: none;
 }
 
-#workspaces button.visible label {
-  color: #d4be98;
+#workspaces button label {
+  color: #c4b28a;
 }
 
-/* Focused workspace: light, like dwm's selected tag */
+#workspaces button.visible label {
+  color: #c4b28a;
+}
+
+/* Workspace enfocado: claro, como el tag seleccionado de dwm */
 #workspaces button.focused {
-  background: #d4be98;
-  border-radius: 0;
+  background: #c4b28a;
 }
 
 #workspaces button.focused label {
-  color: #32302f;
+  color: #181616;
 }
 
 #workspaces button.urgent label {
-  color: #ea6962;
+  color: #c4746e;
 }
 
 #workspaces button:hover {
+  background: rgba(40, 39, 39, 0.8);
   box-shadow: none;
   text-shadow: none;
-  background: rgba(60, 56, 54, 0.8);
   border-top: none;
 }
 
 #mode {
-  padding: 0px 5px;
-  color: #ea6962;
-  background-color: #32302f;
+  padding: 0 5px;
+  color: #c4746e;
+  background-color: #181616;
 }
 
-/* ---------- Middle: light ---------- */
+/* ---------- Centro: claro ---------- */
 
 #window {
-  padding: 0px 5px;
-  color: #32302f;
-  background-color: #d4be98;
+  padding: 0 5px;
+  background-color: #c4b28a;
 }
 
-/* ---------- Right: dark ---------- */
+#window label {
+  color: #181616;
+}
+
+/* ---------- Derecha: oscuro ---------- */
 
 #mpris,
-#pulseaudio,
 #bluetooth,
-#clock.date,
 #clock {
-  padding: 0px 5px 0px 0px;
-  background-color: #32302f;
+  padding: 0 5px 0 0;
+  background-color: #181616;
 }
 
-/* mpris is empty when stopped but its padding/background still render,
-   which was pushing the dark block out to the left */
+#pulseaudio {
+  padding: 0 5px;
+  background-color: #181616;
+}
+
+/* mpris vacío igual renderiza padding y fondo, lo que empujaba
+   el bloque oscuro hacia la izquierda */
 #mpris.playing,
 #mpris.paused {
-  padding: 0px 5px;
+  padding: 0 0 0 10px;
 }
 
 #mpris.stopped {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 #custom-wlogout {
-  padding: 0px 0px 0px 0px;
-  color: #89b482;
+  padding: 0;
+  color: #87a987;
 }

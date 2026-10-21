@@ -1,0 +1,104 @@
+/* Gruvbox Material Dark Soft
+   bg: #32302f   bg1: #3c3836   fg/light: #d4be98
+   red: #ea6962  blue: #7daea3  aqua: #89b482 */
+
+* {
+  font-family: UDEV Gothic;
+  font-size: 16px;
+  font-weight: 900;
+  color: #d4be98;
+  border-radius: 0;
+}
+
+window#waybar {
+  background-color: #d4be98;
+}
+
+/* ---------- Izquierda: oscuro ---------- */
+
+#workspaces {
+  padding: 0;
+  background-color: #32302f;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background: transparent;
+  border: none;
+}
+
+#workspaces button label {
+  color: #d4be98;
+}
+
+#workspaces button.visible label {
+  color: #d4be98;
+}
+
+/* Workspace enfocado: claro, como el tag seleccionado de dwm */
+#workspaces button.focused {
+  background: #d4be98;
+}
+
+#workspaces button.focused label {
+  color: #32302f;
+}
+
+#workspaces button.urgent label {
+  color: #ea6962;
+}
+
+#workspaces button:hover {
+  background: rgba(60, 56, 54, 0.8);
+  box-shadow: none;
+  text-shadow: none;
+  border-top: none;
+}
+
+#mode {
+  padding: 0 5px;
+  color: #ea6962;
+  background-color: #32302f;
+}
+
+/* ---------- Centro: claro ---------- */
+
+#window {
+  padding: 0 5px;
+  background-color: #d4be98;
+}
+
+#window label {
+  color: #32302f;
+}
+
+/* ---------- Derecha: oscuro ---------- */
+
+#mpris,
+#bluetooth,
+#clock {
+  padding: 0 5px 0 0;
+  background-color: #32302f;
+}
+
+#pulseaudio {
+  padding: 0 5px;
+  background-color: #32302f;
+}
+
+/* mpris vacío igual renderiza padding y fondo, lo que empujaba
+   el bloque oscuro hacia la izquierda */
+#mpris.playing,
+#mpris.paused {
+  padding: 0 0 0 10px;
+}
+
+#mpris.stopped {
+  padding: 0;
+  margin: 0;
+}
+
+#custom-wlogout {
+  padding: 0;
+  color: #89b482;
+}
