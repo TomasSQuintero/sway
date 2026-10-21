@@ -1,24 +1,26 @@
-/* Kanagawa Dragon
-   bg: #181616   bg1: #282727   fg/light: #c4b28a (dragonYellow)
-   red: #c4746e  green: #87a987 */
+@define-color dark  #282727;
+@define-color light #B6927B;
+
+@define-color red   #c4746e;
+@define-color green #87a987;
 
 * {
   font-family: UDEV Gothic;
   font-size: 16px;
   font-weight: 900;
-  color: #c4b28a;
+  color: @light;
   border-radius: 0;
 }
 
 window#waybar {
-  background-color: #c4b28a;
+  background-color: @light;
 }
 
 /* ---------- Izquierda: oscuro ---------- */
 
 #workspaces {
   padding: 0;
-  background-color: #181616;
+  background-color: @dark;
 }
 
 #workspaces button {
@@ -28,28 +30,33 @@ window#waybar {
 }
 
 #workspaces button label {
-  color: #c4b28a;
+  color: @light;
 }
 
 #workspaces button.visible label {
-  color: #c4b28a;
+  color: @light;
 }
 
 /* Workspace enfocado: claro, como el tag seleccionado de dwm */
 #workspaces button.focused {
-  background: #c4b28a;
+  background: @light;
 }
 
 #workspaces button.focused label {
-  color: #181616;
+  color: @dark;
 }
 
 #workspaces button.urgent label {
-  color: #c4746e;
+  color: @red;
+}
+
+
+#workspaces button:hover label {
+  color: @dark;
 }
 
 #workspaces button:hover {
-  background: rgba(40, 39, 39, 0.8);
+  background: @light;
   box-shadow: none;
   text-shadow: none;
   border-top: none;
@@ -57,19 +64,19 @@ window#waybar {
 
 #mode {
   padding: 0 5px;
-  color: #c4746e;
-  background-color: #181616;
+  color: @red;
+  background-color: @dark;
 }
 
 /* ---------- Centro: claro ---------- */
 
 #window {
   padding: 0 5px;
-  background-color: #c4b28a;
+  background-color: @light;
 }
 
 #window label {
-  color: #181616;
+  color: @dark;
 }
 
 /* ---------- Derecha: oscuro ---------- */
@@ -78,12 +85,12 @@ window#waybar {
 #bluetooth,
 #clock {
   padding: 0 5px 0 0;
-  background-color: #181616;
+  background-color: @dark;
 }
 
 #pulseaudio {
   padding: 0 5px;
-  background-color: #181616;
+  background-color: @dark;
 }
 
 /* mpris vacío igual renderiza padding y fondo, lo que empujaba
@@ -100,5 +107,5 @@ window#waybar {
 
 #custom-wlogout {
   padding: 0;
-  color: #87a987;
+  color: @green;
 }
