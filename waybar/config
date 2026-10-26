@@ -62,9 +62,11 @@
 
 "bluetooth": {
     "format": "[ 󰂯 ]",
-    "format-disabled": "[ 󰂲 ]",
-    "format-off": "[ 󰂲 ]",
-    "format-no-controller": "[ 0 ]",
+    // "format-disabled": "[ 󰂲 ]",
+    // "format-off": "[ 󰂲 ]",
+    "format-disabled": "[ bt off ]",
+    "format-off": "[ bt off ]",
+    "format-no-controller": "[ no-bt ]",
     "on-click": "kitty -e bluetui",
     "on-click-right": "rfkill toggle bluetooth",
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
@@ -77,7 +79,7 @@
     "timezone": "America/Argentina/Buenos_Aires",
     "format": "[ {:%d.%m} ]",
     //"tooltip": false
-    "tooltip-format": "{:%A, %d %B %Y}",
+    "tooltip-format": "{:%A, %d %B %Y}"
 },
 
 "clock": {
