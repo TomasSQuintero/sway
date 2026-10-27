@@ -50,7 +50,6 @@ window#waybar {
   color: @red;
 }
 
-
 #workspaces button:hover label {
   color: @dark;
 }
@@ -79,30 +78,32 @@ window#waybar {
   color: @dark;
 }
 
-/* ---------- Derecha: oscuro ---------- */
+/* Spacing: 10px everywhere (middle part -> dark block, between modules, right edge) */
 
-#mpris,
-#bluetooth,
-#clock {
-  padding: 0 5px 0 0;
-  background-color: @dark;
+#mpris {
+  padding: 0 15px;
+  color: @dark;
+  background-color: @light;
 }
 
-#pulseaudio {
-  padding: 0 5px;
-  background-color: @dark;
-}
-
-/* mpris vacío igual renderiza padding y fondo, lo que empujaba
-   el bloque oscuro hacia la izquierda */
-#mpris.playing,
-#mpris.paused {
-  padding: 0 0 0 10px;
-}
-
+/* empty mpris must not take any space */
 #mpris.stopped {
   padding: 0;
   margin: 0;
+}
+
+/* ---------- Derecha: oscuro ---------- */
+
+#pulseaudio,
+#bluetooth,
+#clock {
+  padding: 0 15px 0 0;
+  background-color: @dark;
+}
+
+/* left edge of the dark block */
+#pulseaudio {
+  padding-left: 15px;
 }
 
 #custom-wlogout {
