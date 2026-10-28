@@ -1,13 +1,18 @@
 vim.pack.add({
-	{ src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
+    { src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
 })
 
 require("render-markdown").setup({
-        code = {enabled = false},
-        bullet = { icons = { '', '', '', '' }, },
-        link = { enabled = true, },
-        heading = {enabled = false},
-        paragraph = {enabled = false},
-        sign = {enabled = false},
-        indent = {enabled = false},
+    bullet = { icons = { '', '', '', '' }, },
+    link = { enabled = true, },
+    paragraph = {enabled = false},
+    sign = {enabled = false},
+    -- code = {enabled = false},
+    -- indent = {enabled = false},
+    -- heading = {enabled = false},
+    heading = {
+        sign = false,
+        icons = { '█ ', '▓ ', '▒ ', '░ ', '◆ ', '◇ ' },
+        backgrounds = {},
+    }
 })
