@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Gap sizes to restore when gaps are turned back on
-INNER=10
-OUTER=5
+INNER=8
+OUTER=4
 STATE="${XDG_RUNTIME_DIR:-/tmp}/sway-gaps-off"
 
 power_menu() {

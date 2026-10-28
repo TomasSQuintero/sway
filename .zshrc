@@ -58,6 +58,9 @@ PROMPT='%~ > '
 _set_cursor() { printf '\e[3 q' }
 precmd_functions+=(_set_cursor)
 
+bindkey '^b' backward-word
+bindkey '^f' forward-word
+
 
 # ----------------------------------------------------------------------------
 # Colors
@@ -234,3 +237,7 @@ eval "$(zoxide init --cmd cd zsh)"
 # ----------------------------------------------------------------------------
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/tom/.local/bin:$PATH"

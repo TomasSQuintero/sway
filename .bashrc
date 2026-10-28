@@ -185,3 +185,7 @@ HISTFILESIZE=200000
 
 # to trim the path:
 # PROMPT_DIRTRIM=3
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/tom/.local/bin:$PATH"
