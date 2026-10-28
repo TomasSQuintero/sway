@@ -56,6 +56,10 @@ zathura = [
 	{ run = 'setsid zathura %s', orphan = true, desc = "zathura", for = "linux" },
 	{ run = 'setsid zathura %s', orphan = true, desc = "zathura", for = "macos" },
 ]
+sioyek = [
+	{ run = 'setsid sioyek --new-window %s', orphan = true, desc = "sioyek", for = "linux" },
+	{ run = 'setsid sioyek --new-window %s', orphan = true, desc = "sioyek", for = "macos" },
+]
 qimgv = [
 	{ run = 'qimgv %s1', orphan = true, desc = "qimgv", for = "linux" },
 ]
@@ -79,7 +83,8 @@ rules = [
 	# Virtual file system
 	{ mime = "vfs/{absent,stale}", use = "download" },
 	# PDF
-	{ mime = "application/pdf", use = [ "zathura", "reveal" ] },
+	# { mime = "application/pdf", use = [ "zathura", "reveal" ] },
+	{ mime = "application/pdf", use = [ "sioyek", "reveal" ] },
 	# Fallback
 	{ url = "*", use = [ "open", "reveal" ] },
 ]
