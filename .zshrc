@@ -126,6 +126,7 @@ dotdirs=(
     ~/.bashrc
     ~/.config/dunst/
     ~/.config/fastfetch/
+    ~/.config/foot/
     ~/.config/kitty/
     ~/.config/mpd/
     ~/.config/mpv/
@@ -207,6 +208,9 @@ pdf() {
     fi
 }
 
+autoload -Uz add-zsh-hook
+_foot_title() { print -Pn '\e]2;%~\a' }   # %~ = path with ~ abbreviation
+add-zsh-hook precmd _foot_title
 
 # ----------------------------------------------------------------------------
 # yazi (cd to the directory you quit in)
