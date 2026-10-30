@@ -57,8 +57,8 @@ zathura = [
 	{ run = 'setsid zathura %s', orphan = true, desc = "zathura", for = "macos" },
 ]
 sioyek = [
-	{ run = 'setsid sioyek --new-window %s', orphan = true, desc = "sioyek", for = "linux" },
-	{ run = 'setsid sioyek --new-window %s', orphan = true, desc = "sioyek", for = "macos" },
+	{ run = 'setsid sioyek --new-instance %s', orphan = true, desc = "sioyek", for = "linux" },
+	{ run = 'setsid sioyek --new-instance %s', orphan = true, desc = "sioyek", for = "macos" },
 ]
 qimgv = [
 	{ run = 'qimgv %s1', orphan = true, desc = "qimgv", for = "linux" },
