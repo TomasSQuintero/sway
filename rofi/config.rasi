@@ -12,7 +12,7 @@ configuration {
   bg: #282828;
   bgt: #282828d0;
   t: transparent;
-  fg: #d4be98;
+  fg: #B6927B;
 
   selected-bg: @fg;
   selected-fg: @bg;
