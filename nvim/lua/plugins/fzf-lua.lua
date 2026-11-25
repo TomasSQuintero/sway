@@ -15,7 +15,7 @@ fzf.setup({
     fullscreen = false,
 
     preview = {
-      layout        = "vertical", -- "horizontal"|"vertical"|"flex"
+      layout        = "horizontal", -- "horizontal"|"vertical"|"flex"
       horizontal    = "right:50%",  -- preview position when layout=horizontal ("right:60%"/"left:50%")
       vertical      = "down:45%",   -- preview position when layout=vertical ("down:45%"/"up:50%")
       flip_columns  = 100,          -- with layout="flex", switch to vertical below this width
